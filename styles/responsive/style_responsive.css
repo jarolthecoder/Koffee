@@ -69,7 +69,11 @@
 
     /* Sections */
     #hero {
-        height: 65vh;
+        height: 93vh;
+    }
+
+    #hero .item__img-wrap .item__img--t1 {
+    --overflow: 0px;
     }
 
     #about .row .col-right {
