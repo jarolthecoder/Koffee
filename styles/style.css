@@ -631,7 +631,7 @@ p {
 
 /* Locations Block ========================================================== */
 #location-block {
-  padding: 5rem 0;
+  padding: 0 0 5rem 0;
 }
 #location-block .row {
   display: grid;

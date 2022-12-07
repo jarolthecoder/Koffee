@@ -25,7 +25,8 @@
     /* Visibility */
     #main-navigation,
     .nav-btn-container,
-    #hero .btn-container  {
+    #hero .btn-container,
+    .slide-arrow  {
         display: none;
     }
 
@@ -69,7 +70,7 @@
 
     /* Sections */
     #hero {
-        height: 90vh;
+        height: 88.88vh;
     }
 
     #hero .bg-layer {
@@ -134,10 +135,5 @@
         justify-content: flex-start;
         width: 220%;
         flex: none;
-    }
-
-    .slide-arrow {
-        background: none;
-        color: #FFFFFF;
     }
 }
