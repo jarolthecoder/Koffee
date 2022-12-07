@@ -199,8 +199,10 @@ class SmoothScroll {
 
 // And then..
 window.onload = () => {
-    // Get the scroll position
-    getPageYScroll();
-    // Initialize the Smooth Scrolling
-    new SmoothScroll();
+    if(window.innerWidth > 800) {
+        // Get the scroll position
+        getPageYScroll();
+        // Initialize the Smooth Scrolling
+        new SmoothScroll();
+    }
 };

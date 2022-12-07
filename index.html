@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koffee | Coffee Shop</title>
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/style_responsive.css">
+    <link rel="stylesheet" href="./styles/responsive/style_responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -23,23 +23,23 @@
                     <nav id="main-navigation" class="col">
                         <ul class="navigation col">
                             <li class="nav-item">
-                                <a href="" class="nav-link link-active">Home</a>
+                                <a href="" class="nav-link text-white">Home</a>
                                 <div class="marker marker-active bg-accent"></div>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link">Who we are</a>
+                                <a href="" class="nav-link text-white">Who we are</a>
                                 <div class="marker bg-accent"></div>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link">Coffee Shop</a>
+                                <a href="" class="nav-link text-white">Coffee Shop</a>
                                 <div class="marker bg-accent"></div>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link">Cafe</a>
+                                <a href="" class="nav-link text-white">Cafe</a>
                                 <div class="marker bg-accent"></div>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link">Contact</a>
+                                <a href="" class="nav-link text-white">Contact</a>
                                 <div class="marker bg-accent"></div>
                             </li>
                         </ul>
@@ -52,6 +52,46 @@
                             <i class="fa-solid fa-user"></i>
                         </button>
                     </div>
+                    <!-- Mobile Navbar Toggle -->
+                    <div class="nav-toggle" aria-label="menu">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <!-- Mobile Navbar -->
+                    <nav id="mobile-navbar">
+                        <ul class="navigation-mobile">
+                            <li class="nav-item">
+                                <a href="" class="nav-link link-active">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-dark">Who we are</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-dark">Coffee Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-dark">Cafe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link text-dark">Contact</a>
+                            </li>
+                        </ul>
+
+                        <ul class="social-media-mobile">
+                            <li class="social-media-icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </li>
+                            <li class="social-media-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </li>
+                            <li class="social-media-icon">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </li>
+                            <li class="social-media-icon">
+                                <i class="fa-brands fa-twitter"></i>
+                            </li>
+                        </ul>        
+                    </nav>
                 </div>
             </header>
             <!-- Hero -->
@@ -66,13 +106,13 @@
                 <div class="section-wrapper">
                     <div class="hero-title">
                         <p class="lead" data-aos="fade-up">
-                            <span class="animate__animated animate__fadeIn animate__delay-1s anime__faster">
+                            <span class="animate__animated animate__fadeIn animate__delay-1s animate__faster">
                                 Tradition.
                             </span>
-                            <span class="animate__animated animate__fadeIn animate__delay-2s anime__faster">
+                            <span class="animate__animated animate__fadeIn animate__delay-2s animate__faster">
                                 Passion.
                             </span>
-                            <span class="animate__animated animate__fadeIn animate__delay-3s anime__faster">
+                            <span class="animate__animated animate__fadeIn animate__delay-3s animate__faster">
                                 Taste.
                             </span>
                         </p>

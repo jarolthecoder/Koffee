@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
     /* Fonts */
     h1 {
         font-size: 3.5rem;
@@ -29,6 +29,22 @@
         display: none;
     }
 
+    .nav-toggle {
+        display: block;
+    }
+
+    #mobile-navbar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7rem;
+    }
+
+    #top-navbar {
+        align-items: center;
+    }
+
     /* Section Size */
     .section-wrapper {
         width: 100%;
@@ -53,7 +69,7 @@
 
     /* Sections */
     #hero {
-        height: 80vh;
+        height: 65vh;
     }
 
     #about .row .col-right {
@@ -99,5 +115,16 @@
     #sub-footer .section-wrapper {
         width: 250px;
         flex-direction: column-reverse;
+    }
+
+    .slides-container {
+        width: auto;
+    }
+
+    .slide {
+        display: flex;
+        justify-content: space-evenly;
+        width: 200%;
+        flex: none;
     }
 }
