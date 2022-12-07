@@ -69,7 +69,11 @@
 
     /* Sections */
     #hero {
-        height: 93vh;
+        height: 90vh;
+    }
+
+    #hero .bg-layer {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.767), rgba(0, 0, 0, 0));
     }
 
     #hero .item__img-wrap .item__img--t1 {
@@ -127,8 +131,13 @@
 
     .slide {
         display: flex;
-        justify-content: space-evenly;
-        width: 200%;
+        justify-content: flex-start;
+        width: 220%;
         flex: none;
+    }
+
+    .slide-arrow {
+        background: none;
+        color: #FFFFFF;
     }
 }

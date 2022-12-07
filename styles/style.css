@@ -145,7 +145,6 @@ p {
 .nav-link {
   padding: 1rem 0 0 0;
   font-size: 1.3rem;
-  font-weight: 700;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
 }
@@ -320,6 +319,7 @@ p {
 }
 #main-navigation .navigation .nav-item {
   position: relative;
+  font-weight: 700;
   cursor: pointer;
 }
 #main-navigation .navigation .nav-item:hover .marker {
@@ -355,6 +355,7 @@ p {
   transition: right 0.3s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 }
 #mobile-navbar .navigation-mobile .nav-item {
+  font-weight: 700;
   padding-bottom: 0.5rem;
 }
 #mobile-navbar .navigation-mobile .link-active {

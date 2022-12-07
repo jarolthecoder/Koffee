@@ -39,6 +39,7 @@
         position: relative;
         .nav-item {
             position: relative;
+            font-weight: $fw-bolder;
             cursor: pointer;
             &:hover .marker{
                 bottom: -2px;
@@ -77,6 +78,7 @@
     transition: right 0.3s cubic-bezier(0.1, 0.82, 0.76, 0.965);
     .navigation-mobile {
         .nav-item {
+            font-weight: $fw-bolder;
             padding-bottom: 0.5rem;
         }
         .link-active {
