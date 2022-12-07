@@ -70,11 +70,11 @@
 
     /* Sections */
     #hero {
-        height: 88.88vh;
+        height: 87.77vh;
     }
 
     #hero .bg-layer {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.381), rgba(0, 0, 0, 0));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.517), rgba(0, 0, 0, 0));
     }
 
     #hero .item__img-wrap .item__img--t1 {
@@ -133,7 +133,7 @@
     .slide {
         display: flex;
         justify-content: flex-start;
-        width: 220%;
+        width: 210%;
         flex: none;
     }
 }
