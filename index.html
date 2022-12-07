@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koffee | Coffee Shop</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/responsive/_responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <main id="main-page-content">
+        <!-- Smooth Scroll Container-->
+        <div data-scroll>
+            <!-- Main Header -->
+             <header id="main-header">
+                <div id="top-navbar" class="row section-wrapper">
+                    <figure class="logo-container col">
+                        <img src="./assets/logo/Koffee-logo-2.png" alt="Kaneki Logo" class="logo">
+                    </figure>
+                    <nav id="main-navigation" class="col">
+                        <ul class="navigation col">
+                            <li class="nav-item">
+                                <a href="" class="nav-link link-active">Home</a>
+                                <div class="marker marker-active bg-accent"></div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Who we are</a>
+                                <div class="marker bg-accent"></div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Coffee Shop</a>
+                                <div class="marker bg-accent"></div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Cafe</a>
+                                <div class="marker bg-accent"></div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Contact</a>
+                                <div class="marker bg-accent"></div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="nav-btn-container">
+                        <button class="btn">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </button>
+                        <button class="btn">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <!-- Hero -->
+            <section id="hero" class="content">
+                <!-- Background Image -->
+                <div class="item">
+                    <div class="item__img-wrap">
+                        <div class="item__img item__img--t1"></div>
+                    </div>
+                </div>
+                <div class="bg-layer"></div>
+                <div class="section-wrapper">
+                    <div class="hero-title">
+                        <p class="lead" data-aos="fade-up">
+                            <span class="animate__animated animate__fadeIn animate__delay-1s anime__faster">
+                                Tradition.
+                            </span>
+                            <span class="animate__animated animate__fadeIn animate__delay-2s anime__faster">
+                                Passion.
+                            </span>
+                            <span class="animate__animated animate__fadeIn animate__delay-3s anime__faster">
+                                Taste.
+                            </span>
+                        </p>
+                        <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">The London Coffee House</h1>
+                    </div>
+                    <div class="btn-container" data-aos="fade-up" data-aos-delay="150">
+                        <button class="btn order-btn">
+                            <span>Order Online</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <button class="btn menu-btn">
+                            <span>View Menu</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="scroll-down animate__animated animate__fadeIn animate__delay-2s">
+                            <div class="mouse">
+                                <div class="scroller"></div>
+                            </div>
+                        <p class="scroll-text">Explore</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products -->
+            <section id="products" class="bg-dark">
+                <div class="section-wrapper row">
+                    <div class="col col-left">
+                        <div class="lead-wrapper" data-aos="fade-up">
+                            <span class="lead-marker"></span>
+                            <p class="lead">Our products</p>
+                        </div>
+                        <h2 class="text-white" data-aos="fade-up">Organic & fresh coffee</h2>
+                        <div class="section-content text-light">
+                            <p data-aos="fade-up">
+                                We provide you with the highest quality coffee in the market. 
+                                Our products are either organic, or we use fair trade practices and environmentally 
+                                friendly packaging. 
+                            </p>
+                            <p data-aos="fade-up">
+                                Our coffee beverages come in a variety of sizes and flavors 
+                                to meet your needs and our coffee beans are always fully roasted. 
+                                We work with small family farms that are committed to sustainable practices and 
+                                quality product.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-right">
+                        <figure>
+                            <img src="./assets/images/about_img.png" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Slider -->
+            <section id="products-slider" class="bg-dark">
+                <div class="section-header">
+                    <p class="lead">Fan Favourite</p>
+                    <h2 class="text-white">Bestsellers</h2>
+                    <p class="text-light">Not sure where to dive in? Here are our customers' favourites.</p>
+                </div>
+                <div class="slider-wrapper">
+                    <button class="slide-arrow" id="slide-arrow-prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="slide-arrow" id="slide-arrow-next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <div id="slides-container" class="slides-container">
+                        <div class="row slide">
+                            <div class="product-card">
+                                <figure>
+                                    <img src="./assets/images/koffee-bag.png" alt="">
+                                    <figcaption class="product-details">
+                                        <h3 class="text-white">House Blend</h3>
+                                        <p class="lead price">15.00 €</p>
+                                        <p class="product-type text-light">Espresso</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="product-card">
+                                <figure>
+                                    <img src="./assets/images/koffee-bag.png" alt="">
+                                    <figcaption class="product-details">
+                                        <h3 class="text-white">Guji Natural</h3>
+                                        <p class="lead price">17.00 €</p>
+                                        <p class="product-type text-light">Filter</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="product-card">
+                                <figure>
+                                    <img src="./assets/images/koffee-bag.png" alt="">
+                                    <figcaption class="product-details">
+                                        <h3 class="text-white">Arabica Blend</h3>
+                                        <p class="lead price">15.00 €</p>
+                                        <p class="product-type text-light">Espresso</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row slide">
+                            <div class="product-card">
+                                <figure>
+                                    <img src="./assets/images/koffee-bag.png" alt="">
+                                    <figcaption class="product-details">
+                                        <h3 class="text-white">Colombia Blend</h3>
+                                        <p class="lead price">15.00 €</p>
+                                        <p class="product-type text-light">Espresso</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="product-card">
+                                <figure>
+                                    <img src="./assets/images/koffee-bag.png" alt="">
+                                    <figcaption class="product-details">
+                                        <h3 class="text-white">The Truth</h3>
+                                        <p class="lead price">15.00 €</p>
+                                        <p class="product-type text-light">Filter</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="product-card">
+                                <figure>
+                                    <img src="./assets/images/koffee-bag.png" alt="">
+                                    <figcaption class="product-details">
+                                        <h3 class="text-white">Taramesa Decaf</h3>
+                                        <p class="lead price">16.50 €</p>
+                                        <p class="product-type text-light">Espresso</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn cta-btn">
+                    <a href="">Shop Coffee</a>
+                </button>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="bg-light">
+                <div class="section-wrapper row">
+                    <div class="col col-left">
+                        <figure>
+                            <img src="./assets/images/coffe-shop.png" alt="">
+                        </figure>
+                    </div>
+                    <div class="col col-right">
+                        <div class="lead-wrapper" data-aos="fade-up">
+                            <span class="lead-marker"></span>
+                            <p class="lead">Since 1997</p>
+                        </div>
+                        <h2 class="text-dark" data-aos="fade-up">Our History</h2>
+                        <div class="section-content text-dark">
+                            <p data-aos="fade-up">
+                                From an abandoned storage space to a convivial meeting place in the heart of London, 
+                                we have been serving high quality coffee since 1997.
+                            </p>
+                            <p data-aos="fade-up">
+                                Our coffee beverages come in a variety of sizes and flavors 
+                                to meet your needs and our coffee beans are always fully roasted. 
+                                We work with small family farms that are committed to sustainable practices and 
+                                quality product.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Locations -->
+            <section id="location-block" class="bg-light">
+                <div class="section-wrapper row" data-aos="fade-up">
+                    <div class="col col-left">
+                        <h2 class="text-white">The best coffee in the city</h2>
+                        <p class="text-light">
+                            At Koffee, we roast and serve fresh coffee made with love and quality.
+                            Visit our two locations and let us give you the best coffee experience.
+                        </p>
+                        <button class="btn">
+                            <span>View Our Locations</span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="col col-right">
+                        <figure>
+                            <img src="./assets/images/grid_gal2-900x601.jpg" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section id="cta-block">
+                <div class="item">
+                    <div class="item__img-wrap">
+                        <div class="item__img item__img--t2"></div>
+                    </div>
+                </div>
+                <div class="bg-layer"></div>
+                <div class="section-wrapper">
+                    <h2 class="text-white">Sign up to our mailing list</h2>
+                    <form action="" id="subscribe-form">
+                        <input type="text" placeholder="Email Address">
+                        <button class="btn cta-btn">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Main Footer -->
+            <section id="main-footer" class="bg-dark">
+                <div class="section-wrapper row">
+                    <div class="col">
+                        <figure class="logo-container">
+                            <img src="./assets/logo/Koffee-logo-2.png" alt="" class="logo">
+                            <figcaption>
+                                <p class="lead">Tradition. Passion. Taste.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col">
+                        <h3 class="text-white">Find Us</h3>
+                        <ul class="location-list">
+                            <li>
+                                <h4>Coffee Shop</h4>
+                                <p class="text-light">2606 Saints Alley,<br> London, 22331</p>
+                            </li>
+                            <li>
+                                <h4>Cafe</h4>
+                                <p class="text-light">3497 Watson Street,<br> London, 22334</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3 class="text-white">Support</h3>
+                        <ul class="footer-nav">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Coffee Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Cafes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Locations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3 class="text-white"> Contact Us</h3>
+                        <p class="footer-text">(222)-333-4444</p>
+                        <p class="footer-text">koffee@emailexmpl.com</p>
+                        <div class="social-media-wrapper">
+                            <h3 class="text-light">Follow Us</h3>
+                            <ul class="social-media-list">
+                                <li class="social-media-icon">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </li>
+                                <li class="social-media-icon">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </li>
+                                <li class="social-media-icon">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </li>
+                                <li class="social-media-icon">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer id="sub-footer" class="bg-darker text-light">
+                <div class="section-wrapper">
+                    <p class="copyright">Copyright &copy; 1997-2022 Koffee. All rights reserved.</p>
+                    <figure class="payment-wrapper">
+                        <img src="./assets/images/mastercard.png" alt="" width="35" height="35" class="payment-icon">
+                        <img src="./assets/images/visa.png" alt="" width="35" height="35"  class="payment-icon">
+                        <img src="./assets/images/amex.png" alt="" width="35" height="35"  class="payment-icon">
+                    </figure>
+                </div>
+            </footer>
+        </div>
+    </main>
+    <!-- JS Scripts -->
+    <script src="./scripts/smooth_scroll.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script> AOS.init();</script>
+    <script src="https://kit.fontawesome.com/69a0798591.js" crossorigin="anonymous"></script>
+</body>
+</html>

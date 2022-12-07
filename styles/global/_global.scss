@@ -1,0 +1,269 @@
+/* Fonts: 'Nunito', 'Oswald; Weight: 300, 400, 500,700 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Oswald:wght@400;500;600;700&display=swap');
+@import './variables';
+@import './mixins';
+
+:root {
+    --animate-delay: 0.5s;
+}
+
+/* Default Style Adjust */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    background: $clr-dark;
+    font-family: $ff-body;
+    letter-spacing: 1.3px;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Font General Style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $ff-heading;
+    text-transform: uppercase;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: $fs-xlarge;
+}
+
+h2 {
+    font-size: $fs-large;
+}
+
+p {
+    font-size: $fs-regular;
+    line-height: 30px;
+    padding: 0.3rem 0;
+}
+
+
+/* GENERAL STYLING CLASSES ========================================================== */
+/* Text Color */
+.text-white {
+    color: $clr-white;
+}
+
+.text-light {
+    color: $clr-grey;
+}
+
+.text-dark {
+    color: $clr-dark-blue;
+}
+
+.text-accent {
+   color: $clr-orange-accent;
+}
+
+/* Background Color */
+.bg-light {
+    background: $clr-white;
+}
+
+.bg-dark {
+    background: $clr-dark;
+}
+
+.bg-darker {
+    background: $clr-darker;
+}
+
+.bg-accent {
+    background: $clr-dark-orange-accent;
+}
+
+/* Sub Headings */
+.lead-wrapper {
+    @include dFlex(flex-start, center, row, 1rem);
+     margin-left: -30px;
+}
+
+.col-left {
+    .lead-wrapper {
+        margin-left: -30px;
+    }
+}
+
+.lead {
+    color: $clr-orange-accent;
+    font-size: $fs-medium;
+    font-weight: $fw-bolder;
+    text-transform: uppercase;
+}
+
+.lead-marker {
+    width: 20px;
+    height: 2px;
+    background: $clr-orange-accent;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.7rem 1.7rem;
+    color: $clr-white;
+    font-size: $fs-medium;
+    transition: background ease 0.2s,
+                color ease 0.2s;
+    cursor: pointer;
+}
+
+.cta-btn {
+    background: $clr-orange-accent;
+    font-weight: $fw-bolder;
+    border: none;
+    text-transform: uppercase;
+    &:hover {
+        background: $clr-dark-orange-accent;
+    }
+}
+
+/* Section Size */
+.section-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Background Layers */
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Smooth Scroll Images Style ========================================================== */
+[data-scroll] {
+    will-change: transform;
+}
+
+.item {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    will-change: transform;
+    
+}
+ .item__img-wrap {
+    --aspect-ratio: 1/1.5;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0 0;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+    max-width: 100%;
+    will-change: transform;
+ }
+
+/* Product Slider ========================================================== */
+.slider-wrapper {
+  margin: 1rem 0;
+  overflow: hidden;
+  position: relative;
+}
+ 
+.slides-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
+.slides-container::-webkit-scrollbar {
+    display: none;
+}
+ 
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+}
+
+.slide-arrow {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+    height: 6rem;
+    background: $clr-white;
+    color: $clr-dark-blue;
+    border: none;
+    width: 3rem;
+    font-size: $fs-large;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 100ms;
+    z-index: 2;
+}
+ 
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+ 
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.35rem;
+  border-radius: 0 4rem 4rem 0;
+}
+ 
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.85rem;
+  border-radius: 4rem 0 0 4rem;
+}

@@ -1,0 +1,16 @@
+// Display FLEX 
+@mixin dFlex($justfiy, $align, $direction, $gap) {
+    display: flex;
+    justify-content: $justfiy;
+    align-items: $align;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+// Display GRID
+@mixin dGrid($columns, $align, $gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    align-items: $align;
+    gap: $gap;
+}
