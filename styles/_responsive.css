@@ -1,4 +1,4 @@
-@media (width <= 500px) {
+@media screen and (max-width: 500px) {
     /* Fonts */
     h1 {
         font-size: 3.5rem;
