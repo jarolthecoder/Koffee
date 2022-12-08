@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.wait": 1,
+    "liveServer.settings.root": "",
+    "files.autoSaveDelay": 1,
+    "files.autoSave": "afterDelay",
+    "liveServer.settings.CustomBrowser": "chrome",
+}

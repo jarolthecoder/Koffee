@@ -347,19 +347,25 @@ p {
   display: none;
   top: 0;
   right: -100%;
-  padding: 7rem 2rem;
+  padding: 5rem 2rem;
   width: 100%;
   height: 100vh;
   background: #FFFFFF;
   z-index: 3;
-  transition: right 0.3s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+  transition: right 400ms cubic-bezier(0.77, 0.22, 0.175, 1);
 }
 #mobile-navbar .navigation-mobile .nav-item {
   font-weight: 700;
   padding-bottom: 0.5rem;
 }
+#mobile-navbar .navigation-mobile .nav-item .nav-link {
+  font-size: 1.5rem;
+}
 #mobile-navbar .navigation-mobile .link-active {
   color: #f5923c;
+}
+#mobile-navbar .contact-info-mobile {
+  text-transform: uppercase;
 }
 #mobile-navbar .social-media-mobile {
   display: flex;
@@ -369,7 +375,7 @@ p {
   gap: 1rem;
 }
 #mobile-navbar .social-media-mobile .social-media-icon {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: color ease 0.2s;
 }
@@ -389,8 +395,7 @@ p {
   display: none;
   cursor: pointer;
 }
-
-.bar {
+.nav-toggle .bar {
   height: 2.5px;
   width: 100%;
   margin: 7px 0;
@@ -399,26 +404,256 @@ p {
   transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
   z-index: 5;
 }
-.bar:nth-child(1) {
+.nav-toggle .bar:nth-child(1) {
   top: 0;
 }
-.bar:nth-child(2) {
+.nav-toggle .bar:nth-child(2) {
   bottom: 0;
 }
-
-.bar:nth-child(1).bar-active {
+.nav-toggle .bar:nth-child(1).bar-active {
   transform: rotate(43deg);
   top: 7px;
   background-color: #040607;
 }
-
-.bar:nth-child(2).bar-active {
+.nav-toggle .bar:nth-child(2).bar-active {
   transform: rotate(-43deg);
   width: 100%;
   bottom: 7px;
   background-color: #040607;
 }
 
+/* Mobile Navbar Animation */
+.navigation-mobile {
+  padding-top: 3em;
+  opacity: 0;
+  margin-top: -50px;
+  transition: opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.2s, margin-top cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.2s;
+}
+.navigation-mobile .nav-item {
+  padding: 0.5em 0;
+}
+.navigation-mobile .nav-item:nth-child(1).fade-up {
+  -webkit-animation: fade-up-first;
+          animation: fade-up-first;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  transition: -webkit-animation ease 0.5s;
+  transition: animation ease 0.5s;
+  transition: animation ease 0.5s, -webkit-animation ease 0.5s;
+}
+.navigation-mobile .nav-item:nth-child(2).fade-up {
+  -webkit-animation: fade-up-second;
+          animation: fade-up-second;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 50ms;
+          animation-delay: 50ms;
+  opacity: 1;
+  transition: opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.2s, -webkit-animation ease 0.5s;
+  transition: animation ease 0.5s, opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.2s;
+  transition: animation ease 0.5s, opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.2s, -webkit-animation ease 0.5s;
+}
+.navigation-mobile .nav-item:nth-child(3).fade-up {
+  -webkit-animation: fade-up-third;
+          animation: fade-up-third;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+  opacity: 1;
+  transition: opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.3s, -webkit-animation ease 0.5s;
+  transition: animation ease 0.5s, opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.3s;
+  transition: animation ease 0.5s, opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.3s, -webkit-animation ease 0.5s;
+}
+.navigation-mobile .nav-item:nth-child(4).fade-up {
+  -webkit-animation: fade-up-third;
+          animation: fade-up-third;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+  opacity: 1;
+  transition: opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.4s, -webkit-animation ease 0.5s;
+  transition: animation ease 0.5s, opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.4s;
+  transition: animation ease 0.5s, opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.4s, -webkit-animation ease 0.5s;
+}
+.navigation-mobile .nav-item:nth-child(5).fade-up {
+  -webkit-animation: fade-up-third;
+          animation: fade-up-third;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+  opacity: 1;
+  transition: opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.5s, -webkit-animation ease 0.5s;
+  transition: animation ease 0.5s, opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.5s;
+  transition: animation ease 0.5s, opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.5s, -webkit-animation ease 0.5s;
+}
+
+.fade-up {
+  opacity: 1;
+  margin-top: 0;
+}
+
+.contact-info-mobile,
+.social-media-mobile {
+  opacity: 0;
+  padding: 0;
+}
+
+.contact-info-mobile.fade-up {
+  -webkit-animation: fade-up-fourth;
+          animation: fade-up-fourth;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+  transition: -webkit-animation ease 0.5s;
+  transition: animation ease 0.5s;
+  transition: animation ease 0.5s, -webkit-animation ease 0.5s;
+  opacity: 1;
+  transition: opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.5s;
+}
+
+.social-media-mobile.fade-up {
+  -webkit-animation: fade-up-last;
+          animation: fade-up-last;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+  transition: -webkit-animation ease 0.5s;
+  transition: animation ease 0.5s;
+  transition: animation ease 0.5s, -webkit-animation ease 0.5s;
+  opacity: 1;
+  transition: opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.6s;
+}
+
+@-webkit-keyframes fade-up-first {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up-first {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-up-second {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-up-second {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-up-third {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-up-third {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-up-fourth {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-up-fourth {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-up-last {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-up-last {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /* Hero ========================================================== */
 #hero {
   display: flex;
@@ -532,20 +767,41 @@ p {
   height: 10px;
   border-radius: 25%;
   background-color: #FFFFFF;
-  animation-name: scroll;
-  animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+          animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 #hero .scroll-down .scroll-text {
   color: #FFFFFF;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 0.85rem;
-  animation-name: scroll;
-  animation-duration: 2.2s;
-  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
-  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+          animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
 }
 @keyframes scroll {
   0% {
@@ -705,6 +961,12 @@ p {
   border: 1.5px solid #ebebeb;
   background: none;
   color: #FFFFFF;
+}
+#cta-block .section-wrapper #subscribe-form input::-moz-placeholder {
+  color: #ebebeb;
+}
+#cta-block .section-wrapper #subscribe-form input:-ms-input-placeholder {
+  color: #ebebeb;
 }
 #cta-block .section-wrapper #subscribe-form input::placeholder {
   color: #ebebeb;
