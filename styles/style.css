@@ -284,7 +284,7 @@ p {
   width: 100%;
   height: auto;
   z-index: 3;
-  padding: 1rem 0 1.5rem 0;
+  padding: 1rem 0 1rem 0;
 }
 
 #top-navbar {
@@ -293,6 +293,8 @@ p {
   align-items: flex-end;
   flex-direction: row;
   gap: 0;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 1rem;
 }
 #top-navbar .logo {
   width: 90px;
@@ -304,8 +306,23 @@ p {
   padding: 0 0.85rem;
   font-size: 1.15rem;
 }
-#top-navbar .nav-btn-container .btn:hover {
-  color: #f5923c;
+#top-navbar .nav-btn-container .cart-btn {
+  position: relative;
+}
+#top-navbar .nav-btn-container .cart-btn::before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: 0;
+  gap: 0;
+  position: absolute;
+  top: -15px;
+  right: -2px;
+  content: "0";
+  width: 25px;
+  height: 25px;
+  border-radius: 5rem;
+  background: #f5923c;
 }
 
 /* Navigation ========================================================== */
@@ -314,20 +331,29 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 3rem;
+  gap: 0;
   position: relative;
 }
 #main-navigation .navigation .nav-item {
   position: relative;
   font-weight: 700;
+  padding: 0 1.5rem;
   cursor: pointer;
+}
+#main-navigation .navigation .nav-item:hover .nav-link {
+  color: #f5923c;
+  transition: color ease 0.2s;
 }
 #main-navigation .navigation .nav-item:hover .marker {
   bottom: -2px;
   opacity: 1;
   transition: bottom ease 0.2s, opacity ease 0.3s;
 }
+#main-navigation .navigation .nav-item:nth-child(1), #main-navigation .navigation .nav-item:nth-child(2), #main-navigation .navigation .nav-item:nth-child(3), #main-navigation .navigation .nav-item:nth-child(4) {
+  border-right: 1px solid #ebebeb;
+}
 #main-navigation .navigation .marker {
+  display: none;
   position: absolute;
   bottom: -7px;
   left: 50%;

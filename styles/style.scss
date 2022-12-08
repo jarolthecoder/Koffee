@@ -10,11 +10,14 @@
     width: 100%;
     height: auto;
     z-index: 3;
-    padding: 1rem 0 1.5rem 0;
+    padding: 1rem 0 1rem 0;
+
 }
 
 #top-navbar {
     @include dFlex(space-between, flex-end, row, 0);
+    border-bottom: 1px solid $clr-grey;
+    padding-bottom: 1rem;
     .logo {
         width: 90px;
         height: auto;
@@ -25,8 +28,19 @@
             border: none;
             padding: 0 0.85rem;
             font-size: $fs-regular;
-            &:hover {
-                color: $clr-orange-accent;
+        }
+        .cart-btn {
+            position: relative;
+            &::before {
+                @include dFlex(center, center, 0, 0);
+                position: absolute;
+                top: -15px;
+                right: -2px;
+                content: '0';
+                width: 25px;
+                height: 25px;
+                border-radius: 5rem;
+                background: $clr-orange-accent;
             }
         }
     }
@@ -35,21 +49,32 @@
 /* Navigation ========================================================== */
 #main-navigation {
     .navigation {
-        @include dFlex(center, center, row, 3rem);
+        @include dFlex(center, center, row, 0);
         position: relative;
         .nav-item {
             position: relative;
             font-weight: $fw-bolder;
+            padding: 0 1.5rem;
             cursor: pointer;
-
+            &:hover .nav-link {
+                color: $clr-orange-accent;
+                transition: color ease 0.2s;
+            }
             &:hover .marker{
                 bottom: -2px;
                 opacity: 1;
                 transition: bottom ease 0.2s,
                             opacity ease 0.3s;
             }
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                border-right: 1px solid $clr-grey;
+            }
         }
         .marker {
+            display: none;
             position: absolute;
             bottom: -7px;
             left: 50%;
@@ -152,9 +177,8 @@
     padding-top: 3em;
     opacity: 0;
     margin-top: -50px;
-    transition: 
-        opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.2s,
-        margin-top cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.2s;
+    transition: opacity cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.2s,
+                margin-top cubic-bezier(0.1, 0.82, 0.76, 0.965) 0.7s 0.2s;
     .nav-item {
         padding: 0.5em 0;
         &:nth-child(1).fade-up {
