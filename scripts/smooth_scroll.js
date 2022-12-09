@@ -29,6 +29,9 @@ class Item {
         // the inner image
         this.DOM.image = this.DOM.el.querySelector('.item__img');
         this.renderedStyles = {
+            // here we define which property will change as we scroll the page and the items is inside the viewport
+            // in this case we will be translating the image on the y-axis
+            // we interpolate between the previous and current value to achieve a smooth effect
             innerTranslationY: {
                 // interpolated value
                 previous: 0, 
@@ -39,6 +42,9 @@ class Item {
                 // the maximum value to translate the image is set in a CSS variable (--overflow)
                 maxValue: parseInt(getComputedStyle(this.DOM.image).getPropertyValue('--overflow'), 10),
                 // current value setter
+                // the value of the translation will be:
+                // when the item's top value (relative to the viewport) equals the window's height (items just came into the viewport) the translation = minimum value (- maximum value)
+                // when the item's top value (relative to the viewport) equals "-item's height" (item just exited the viewport) the translation = maximum value
                 setValue: () => {
                     const maxValue = this.renderedStyles.innerTranslationY.maxValue;
                     const minValue = -1 * maxValue;
@@ -101,11 +107,17 @@ class Item {
 // SmoothScroll
 class SmoothScroll {
     constructor() {
+        // the <main> element
         this.DOM = {main: document.querySelector('main')};
+        // the scrollable element
+        // we translate this element when scrolling (y-axis)
         this.DOM.scrollable = this.DOM.main.querySelector('div[data-scroll]');
-
+        // the items on the page
         this.items = [];
-        [...this.DOM.main.querySelectorAll('.content > .item')].forEach(item => this.items.push(new Item(item)));t
+        [...this.DOM.main.querySelectorAll('.content > .item')].forEach(item => this.items.push(new Item(item)));
+        // here we define which property will change as we scroll the page
+        // in this case we will be translating on the y-axis
+        // we interpolate between the previous and current value to achieve the smooth scrolling effect
         this.renderedStyles = {
             translationY: {
                 // interpolated value
@@ -115,6 +127,7 @@ class SmoothScroll {
                 // amount to interpolate
                 ease: 0.1,
                 // current value setter
+                // in this case the value of the translation will be the same like the document scroll
                 setValue: () => docScroll
             }
         };
@@ -146,7 +159,8 @@ class SmoothScroll {
         body.style.height = `${this.DOM.scrollable.scrollHeight}px`;
     }
     style() {
-         
+        // the <main> needs to "stick" to the screen and not scroll
+        // for that we set it to position fixed and overflow hidden 
         this.DOM.main.style.position = 'fixed';
         this.DOM.main.style.width = this.DOM.main.style.height = '100%';
         this.DOM.main.style.top = this.DOM.main.style.left = 0;
@@ -165,12 +179,16 @@ class SmoothScroll {
         // and translate the scrollable element
         this.layout();
         
+        // for every item
         for (const item of this.items) {
+            // if the item is inside the viewport call it's render function
+            // this will update the item's inner image translation, based on the document scroll value and the item's position on the viewport
             if ( item.isVisible ) {
                 item.render();
             }
         }
         
+        // loop..
         requestAnimationFrame(() => this.render());
     }
 }
